@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: hsl(30, 38%, 92%);
+  font-size: 14px;
+  font-family: "Fraunces", serif;
+}
+p,
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  padding: 0 15px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.box-img {
+  background-image: url("./images/image-product-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 350px;
+  height: 250px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  @media screen and (min-width: 768px) {
+    background-image: url("./images/image-product-desktop.jpg");
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    background-size: cover;
+    width: 280px;
+    height: auto;
+  }
+}
+
+.content {
+  max-width: 350px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 300px;
+  }
+
+  .content-description {
+    background: #fff;
+    padding: 10px 25px 25px 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    @media screen and (min-width: 768px) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 20px 28px 30px 28px;
+    }
+
+    span {
+      padding: 10px 0;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 4px;
+      color: hsl(228, 12%, 48%);
+      display: block;
+
+      @media screen and (min-width: 768px) {
+        padding: 15px 0;
+      }
+    }
+
+    h1 {
+      font-size: 30px;
+      color: hsl(212, 21%, 14%);
+
+      @media screen and (min-width: 768px) {
+        font-size: 32px;
+      }
+    }
+
+    p {
+      font-family: "Montserrat";
+      color: hsl(228, 12%, 48%);
+      padding: 15px 0;
+      max-width: 295px;
+      line-height: 1.6;
+
+      @media screen and (min-width: 768px) {
+        max-width: 240px;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .content-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      color: hsl(158, 36%, 37%);
+      font-family: "Fraunces";
+      font-size: 32px;
+      padding: 0;
+    }
+
+    span {
+      font-family: "Montserrat";
+      letter-spacing: 0px;
+      text-decoration: line-through;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(158, 36%, 37%);
+    border: none;
+    color: hsl(30, 38%, 92%);
+    font-family: "Montserrat";
+    font-weight: 700;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: hsl(158, 60%, 25%);
+    }
+  }
+}
